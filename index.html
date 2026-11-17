@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>澳科大遊戲設計工作台 × 目魚 AI</title>
+<link rel="icon" href="./assets/must-emblem.png">
+<link rel="stylesheet" href="./studio.css">
+<script src="./studio.js" defer></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#game"><img src="./assets/must-emblem.png" alt="" width="44" height="44"><span><strong>澳門科技大學</strong><small>遊戲設計工作台</small></span></a>
+  <nav aria-label="創作模式">
+    <div class="nav-label">工作台</div>
+    <a href="#game" data-mode="game" aria-current="page"><span>◈</span>遊戲設計 Agent</a>
+    <div class="nav-label tools">創作工具</div>
+    <a href="#image" data-mode="image"><span>▧</span>圖片生成</a>
+    <a href="#video" data-mode="video"><span>▤</span>影片生成</a>
+  </nav>
+  <a class="partner" href="https://66.99.com/"><img src="./assets/muyu-ai-icon.png" alt="" width="26" height="26">目魚 AI ↗</a>
+</aside>
+<main>
+  <div class="workbench">
+    <header>
+      <div>
+        <div class="eyebrow">澳門科技大學 × 目魚 AI <span>體驗版</span></div>
+        <h1 id="title">今天想做甚麼遊戲？</h1>
+        <p id="subtitle">從玩法、受眾或一個靈感開始，整理你的遊戲創作需求。</p>
+      </div>
+      <img id="mode-mark" src="./assets/must-emblem.png" alt="" width="76" height="76">
+    </header>
+    <form id="composer">
+      <label for="prompt" id="prompt-label">遊戲創意</label>
+      <textarea id="prompt" maxlength="4000" placeholder="例如：在澳門舊城尋找線索，設計一段五分鐘的解謎體驗。"></textarea>
+      <div class="toolbar">
+        <span class="mode-pill" id="mode-name">遊戲設計 Agent</span>
+        <button type="button" class="subtle" id="example">載入示例</button>
+        <button type="submit" id="save" disabled>儲存草稿</button>
+      </div>
+    </form>
+    <div class="below">
+      <p id="status" role="status" aria-live="polite"></p>
+      <button class="subtle" id="download" disabled>匯出提示詞</button>
+    </div>
+    <section class="availability" aria-label="服務狀態">
+      <strong>此為 GitHub Pages 靜態體驗版</strong>
+      <p>草稿保存在此瀏覽器。AI 生成、模型設定、專案管理及即時試玩需使用完整工作台後端，此站不會提交生成請求。</p>
+      <a href="https://github.com/DNSPre/ohmygame/tree/codex/must-game-design-studio">查看完整工作台原始碼 ↗</a>
+    </section>
+  </div>
+</main>
+</body>
+</html>
