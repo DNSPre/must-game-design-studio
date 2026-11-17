@@ -1,55 +1,65 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>澳科大遊戲設計工作台 × 目魚 AI</title>
-<link rel="icon" href="./assets/must-emblem.png">
-<link rel="stylesheet" href="./studio.css">
-<script src="./studio.js" defer></script>
-</head>
-<body>
-<aside class="sidebar">
-  <a class="brand" href="#game"><img src="./assets/must-emblem.png" alt="" width="44" height="44"><span><strong>澳門科技大學</strong><small>遊戲設計工作台</small></span></a>
-  <nav aria-label="創作模式">
-    <div class="nav-label">工作台</div>
-    <a href="#game" data-mode="game" aria-current="page"><span>◈</span>遊戲設計 Agent</a>
-    <div class="nav-label tools">創作工具</div>
-    <a href="#image" data-mode="image"><span>▧</span>圖片生成</a>
-    <a href="#video" data-mode="video"><span>▤</span>影片生成</a>
-  </nav>
-  <a class="partner" href="https://66.99.com/"><img src="./assets/muyu-ai-icon.png" alt="" width="26" height="26">目魚 AI ↗</a>
-</aside>
-<main>
-  <div class="workbench">
-    <header>
-      <div>
-        <div class="eyebrow">澳門科技大學 × 目魚 AI <span>體驗版</span></div>
-        <h1 id="title">今天想做甚麼遊戲？</h1>
-        <p id="subtitle">從玩法、受眾或一個靈感開始，整理你的遊戲創作需求。</p>
-      </div>
-      <img id="mode-mark" src="./assets/must-emblem.png" alt="" width="76" height="76">
-    </header>
-    <form id="composer">
-      <label for="prompt" id="prompt-label">遊戲創意</label>
-      <textarea id="prompt" maxlength="4000" placeholder="例如：在澳門舊城尋找線索，設計一段五分鐘的解謎體驗。"></textarea>
-      <div class="toolbar">
-        <span class="mode-pill" id="mode-name">遊戲設計 Agent</span>
-        <button type="button" class="subtle" id="example">載入示例</button>
-        <button type="submit" id="save" disabled>儲存草稿</button>
-      </div>
-    </form>
-    <div class="below">
-      <p id="status" role="status" aria-live="polite"></p>
-      <button class="subtle" id="download" disabled>匯出提示詞</button>
-    </div>
-    <section class="availability" aria-label="服務狀態">
-      <strong>此為 GitHub Pages 靜態體驗版</strong>
-      <p>草稿保存在此瀏覽器。AI 生成、模型設定、專案管理及即時試玩需使用完整工作台後端，此站不會提交生成請求。</p>
-      <a href="https://github.com/DNSPre/ohmygame/tree/codex/must-game-design-studio">查看完整工作台原始碼 ↗</a>
-    </section>
-  </div>
-</main>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; connect-src 'self' blob: http://127.0.0.1:* ws://127.0.0.1:* https://*.supabase.co https://us.i.posthog.com https://eu.i.posthog.com; frame-src 'self' http://127.0.0.1:* http://*.localhost:* https:"
+    />
+    <link rel="icon" href="./assets/must-emblem-D4WMQjsO.png" />
+    <title>游戏设计工作台 · 澳门科技大学</title>
+    <script type="module" crossorigin src="./assets/main-BhEfDmvd.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-BWaJ3C7D.js">
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="./assets/browser-BpU-2wEB.js">
+    <link rel="modulepreload" crossorigin href="./assets/routes-CBMwIe7x.js">
+    <link rel="modulepreload" crossorigin href="./assets/add-Do8Cm4b7.js">
+    <link rel="modulepreload" crossorigin href="./assets/alt-arrow-right-CH_qDS84.js">
+    <link rel="modulepreload" crossorigin href="./assets/popover-placement--ttAxdCw.js">
+    <link rel="modulepreload" crossorigin href="./assets/model-selector-DBGjZRiP.js">
+    <link rel="modulepreload" crossorigin href="./assets/server-CucMwPAf.js">
+    <link rel="modulepreload" crossorigin href="./assets/project-rename-dialog-BDrgE6dK.js">
+    <link rel="modulepreload" crossorigin href="./assets/plugin-integration-CfUsHwrA.js">
+    <link rel="modulepreload" crossorigin href="./assets/clapperboard-A_Sa3Bvs.js">
+    <link rel="modulepreload" crossorigin href="./assets/project-types-aB8WfDYF.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-project-activity-BJ5em42E.js">
+    <link rel="modulepreload" crossorigin href="./assets/window-drag-region-BnMbkTDn.js">
+    <link rel="modulepreload" crossorigin href="./assets/restart-C935oGDQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/playable-assets-BzjH2MXJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-transfer-Dl6Iugkg.js">
+    <link rel="modulepreload" crossorigin href="./assets/format-bytes-CiizSGOU.js">
+    <link rel="modulepreload" crossorigin href="./assets/maximize-CntT3Yxr.js">
+    <link rel="modulepreload" crossorigin href="./assets/pen-hxV8Urkx.js">
+    <link rel="modulepreload" crossorigin href="./assets/library-assets-I1M7jVw7.js">
+    <link rel="modulepreload" crossorigin href="./assets/godot-icon-1pUD04Rj.js">
+    <link rel="modulepreload" crossorigin href="./assets/upload-CqYkTC2j.js">
+    <link rel="modulepreload" crossorigin href="./assets/agent-usage-OX7oK7At.js">
+    <link rel="modulepreload" crossorigin href="./assets/composer-capability-references-CJtOQr2L.js">
+    <link rel="modulepreload" crossorigin href="./assets/game-studio-home-CWEvFGc1.js">
+    <link rel="modulepreload" crossorigin href="./assets/audio-BMyHofH3.js">
+    <link rel="modulepreload" crossorigin href="./assets/asset-canvas-afqJna3J.js">
+    <link rel="modulepreload" crossorigin href="./assets/video-references-DaNs_8i5.js">
+    <link rel="modulepreload" crossorigin href="./assets/canvas-api-Dnm_53r8.js">
+    <link rel="modulepreload" crossorigin href="./assets/asset-canvas-quick-start-DBrYM7hl.js">
+    <link rel="modulepreload" crossorigin href="./assets/sidebar-page-CSVuJUD5.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-bin-trash-BNtdfBMh.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-arrow-right-up-DOJ4V9cj.js">
+    <link rel="modulepreload" crossorigin href="./assets/tuning-2-C1Lpx-GO.js">
+    <link rel="modulepreload" crossorigin href="./assets/canvas-chip-select-DmKpRD8r.js">
+    <link rel="modulepreload" crossorigin href="./assets/cloud-quota-B03yXok3.js">
+    <link rel="modulepreload" crossorigin href="./assets/appearance-CmjNScPV.js">
+    <link rel="modulepreload" crossorigin href="./assets/error-boundary-CRm1F8RY.js">
+    <link rel="modulepreload" crossorigin href="./assets/desktop-close-guard-K_EQrRzO.js">
+    <link rel="stylesheet" crossorigin href="./assets/window-drag-region-lXgMZ0rS.css">
+    <link rel="stylesheet" crossorigin href="./assets/playable-assets-DK-9_zmF.css">
+    <link rel="stylesheet" crossorigin href="./assets/game-studio-home-idWS401P.css">
+    <link rel="stylesheet" crossorigin href="./assets/desktop-close-guard-Cu0uQ_w2.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-4dvh4krf.css">
+    <link rel="stylesheet" crossorigin href="./assets/plugin-builder-BHUrbbbb.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

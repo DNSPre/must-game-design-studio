@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-P2Xu9kJm.js";import{t as e}from"./web-game-player-gPHB_gMm.js";var t=document.querySelector(`iframe`);Object.assign(window,{loadGame:n=>new Promise((r,i)=>{let a=e(n,n),o=setTimeout(()=>i(Error(`Game page did not load.`)),15e3),s=t.cloneNode(!1);s.onload=()=>{clearTimeout(o),r()},s.src=a,t.replaceWith(s),t=s})});
