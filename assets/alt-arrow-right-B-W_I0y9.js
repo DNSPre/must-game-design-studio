@@ -1,0 +1,1 @@
+import{a as e}from"./rolldown-runtime-BWaJ3C7D.js";import{Ia as t,Ma as n,Na as r}from"./routes-CeJ2y_gz.js";var i=e(t(),1),a=r(),o=(0,i.forwardRef)((e,t)=>(0,a.jsx)(n,{ref:t,...e,iconName:`alt-arrow-right-linear`,children:(0,a.jsx)(`path`,{d:`M9 5L15 12L9 19`,stroke:`currentColor`,strokeLinecap:`round`,strokeLinejoin:`round`})}));export{o as t};
