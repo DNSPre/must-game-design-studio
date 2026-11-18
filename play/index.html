@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src http://127.0.0.1:11434; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>AI 遊戲創作 · 澳門科技大學</title>
+<link rel="icon" href="../assets/must-emblem-D4WMQjsO.png">
+<link rel="stylesheet" href="play.css">
+<script type="module" src="play.js"></script>
+</head>
+<body>
+<header><a href="../"><img src="../assets/must-emblem-D4WMQjsO.png" alt="" width="42" height="42">澳門科技大學 · 遊戲設計工作台</a></header>
+<main>
+<section class="panel">
+<h1>AI 遊戲創作</h1>
+<p>描述主角、場景和目標，用本機模型生成可試玩的 2D 小遊戲。</p>
+<form id="generator">
+<label for="idea">遊戲構想</label>
+<textarea id="idea" maxlength="1500" required placeholder="例如：小狐狸在月光森林收集星星，避開幽靈。"></textarea>
+<div class="actions"><button type="button" id="connect">連接本機 Ollama</button><select id="model" aria-label="本機模型" disabled><option>請先連接</option></select></div>
+<div class="actions"><button class="primary" id="generate" type="submit" disabled>生成遊戲</button><button id="sample" type="button">試玩內建範例</button></div>
+</form>
+<p id="status" role="status"></p>
+<details>
+<summary>如何連接本機模型？</summary>
+<p>安裝 <a href="https://ollama.com/download">Ollama</a> 並下載至少一個本機模型。若 Ollama 已在運行，先退出，再於終端機啟動。</p>
+<p>macOS／Linux</p>
+<pre><code>OLLAMA_HOST=127.0.0.1:11434 OLLAMA_ORIGINS=https://game.design.cab OLLAMA_NO_CLOUD=1 ollama serve</code></pre>
+<p>Windows PowerShell</p>
+<pre><code>$env:OLLAMA_HOST="127.0.0.1:11434"
+$env:OLLAMA_ORIGINS="https://game.design.cab"
+$env:OLLAMA_NO_CLOUD="1"
+ollama serve</code></pre>
+<p>回到網頁按「連接本機 Ollama」。瀏覽器若詢問本機網路存取，請選擇允許。</p>
+</details>
+</section>
+<section class="panel" id="game" hidden>
+<h2 id="title"></h2>
+<p id="instructions"></p>
+<canvas id="board" width="512" height="512" tabindex="0" aria-label="遊戲畫面，使用方向鍵移動"></canvas>
+<p id="score" aria-live="polite"></p>
+<div class="actions controls" aria-label="移動控制">
+<button type="button" data-move="ArrowLeft" aria-label="向左">←</button><button type="button" data-move="ArrowUp" aria-label="向上">↑</button><button type="button" data-move="ArrowDown" aria-label="向下">↓</button><button type="button" data-move="ArrowRight" aria-label="向右">→</button><button type="button" id="restart">重玩</button>
+</div>
+</section>
+</main>
+</body>
+</html>

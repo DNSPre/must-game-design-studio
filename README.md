@@ -1,8 +1,7 @@
 # 澳科大遊戲設計工作台 · GitHub Pages
 
-此倉庫只包含公開靜態體驗版；完整工作台在
-[DNSPre/ohmygame 的澳科大分支](https://github.com/DNSPre/ohmygame/tree/codex/must-game-design-studio)。
-Pages 不執行後端。此站只在訪客瀏覽器內儲存及匯出提示詞，沒有模型帳密或專案資料。
+公開首頁與[訪客遊戲創作](https://game.design.cab/play/)由 GitHub Pages 提供。訪客可直接試玩範例，或以自行啟動的本機 Ollama 生成 2D 收集遊戲。
+[完整工作台](https://game.design.cab/studio/)提供專案和其他創作工具，需要登入。
 
 標識來源：[澳門科技大學](https://www.must.edu.mo/must/image/mobile-logo.png)、
 [目魚 AI](https://66.99.com/icons/icon-192.png)。
